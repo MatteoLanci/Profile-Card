@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font: 18px "Nunito", sans-serif;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url(assets/bg.png) no-repeat center;
+  background-size: cover;
+  animation: backgroundZoomAnimation 25s forwards;
+}
+
+@keyframes backgroundZoomAnimation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+.profile-card {
+  box-shadow: 0 10px 200px -60px black;
+  border-radius: 50px;
+  width: 650px;
+  position: relative;
+  backdrop-filter: blur(30px);
+  border: 2px solid #ffffff40;
+  padding: 3rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.profile-card__img {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  box-shadow: 0 10px 60px -10px rgba(13, 28, 39, 0.5);
+  border-radius: 50%;
+}
+
+.profile-card__img img {
+  border-radius: 50%;
+}
+
+.profile-card__desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #f9f9f9;
+}
+
+.profile-card__desc h1 {
+  font-size: 3rem;
+}
+
+#profile-subtitle {
+  font-size: 1.5rem;
+  color: #f9f9f995;
+}
+
+#location {
+  font-size: 1rem;
+  color: #f9f9f995;
+}
+
+.profile-card__social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  color: #f9f9f9;
+}
+
+.facebook {
+  background: linear-gradient(45deg, #1d3469, #3d5c95, #405e96);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px #1d3469;
+}
+
+.twitter {
+  background: linear-gradient(45deg, #0084b4, #55acee, #8ec1da);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px #0084b4;
+}
+
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px #4f5bd5;
+}
+
+.github {
+  background: linear-gradient(45deg, #18191a, #242526, #3a3b3c);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px #18191a;
+}
+
+.profile-card__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.blue {
+  width: 200px;
+  text-align: center;
+  background: linear-gradient(45deg, #1c82ad, #00337c);
+  border-radius: 50px;
+  padding: 1rem;
+  color: #f9f9f9;
+  box-shadow: 0 5px 20px #00337c;
+  transform: 3s;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+}
+
+.blue:hover {
+  transform: scale(1.1);
+  transition: ease-in-out 0.2s;
+}
+
+.orange {
+  width: 200px;
+  text-align: center;
+  background: linear-gradient(45deg, #d3756b, #f0997d);
+  border-radius: 50px;
+  padding: 1rem;
+  color: #f9f9f9;
+  box-shadow: 0 5px 20px #d3756b;
+  transform: 3s;
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+}
+
+.orange:hover {
+  transform: scale(1.1);
+  transition: ease-in-out 0.2s;
+}
+
+/* -----------RESPONSIVE----------- */
+
+@media screen and (max-width: 480px) {
+  .profile-card {
+    width: 90vw;
+    height: 90vh;
+  }
+
+  .profile-card__img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile-card__desc h1 {
+    font-size: 2.3rem;
+  }
+
+  #profile-subtitle {
+    font-size: 1.3rem;
+  }
+
+  #location {
+    font-size: 1rem;
+  }
+
+  .profile-card__social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    color: #f9f9f9;
+  }
+
+  .profile-card__actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .blue {
+    width: 350px;
+  }
+
+  .orange {
+    width: 350px;
+  }
+}
