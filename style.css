@@ -240,7 +240,7 @@ body::before {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 400px) {
   .profile-card {
     width: 90vw;
     height: 90vh;
